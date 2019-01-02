@@ -1,9 +1,11 @@
 require 'httparty'
 require 'json'
+require './lib/roadmap'
 
 
 class Kele
   include HTTParty
+  include Roadmap
   base_uri 'https://www.bloc.io/api/v1/'
 
 
@@ -25,6 +27,11 @@ class Kele
     JSON.parse(response.body).to_a
   end
 
+
+
+# current enrollment id 51963
+# checkpoint_id random 2989
+# chain id 7062
   def api_url(endpoint)
     "https://www.bloc.io/api/v1/#{endpoint}"
   end
