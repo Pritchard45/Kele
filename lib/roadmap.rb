@@ -1,6 +1,10 @@
 require 'httparty'
 require 'json'
 
+# current enrollment id 51963
+# checkpoint_id random 2989
+# chain id 7062
+
 module Roadmap
   include HTTParty
   base_uri 'https://www.bloc.io/api/v1/'
